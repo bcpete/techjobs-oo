@@ -29,33 +29,33 @@
 
         <!-- TODO #5 - Create <select> dropdowns for other job fields -->
         <div class="form-group">
-            <label th:for="location">Location</label>
-            <select th:field="*{location}">
+            <label th:for="locationId">Location</label>
+            <select th:field="*{locationId}">
                 <option th:each="location : *{locations}"
-                        th:value="${location.value}"
+                        th:value="${location.id}"
                         th:text="${location.value}"></option>
             </select>
-            <span th:errors="*{location}" class="error"></span>
+            <span th:errors="*{locationId}" class="error"></span>
         </div>
 
         <div class="form-group">
-            <label th:for="coreCompetency">Core Competency</label>
-            <select th:field="*{coreCompetency}">
+            <label th:for="coreCompetencyId">Core Competency</label>
+            <select th:field="*{coreCompetencyId}">
                 <option th:each="coreCompetency : *{coreCompetencies}"
-                        th:value="${coreCompetency.value}"
+                        th:value="${coreCompetency.id}"
                         th:text="${coreCompetency.value}"></option>
             </select>
-            <span th:errors="*{coreCompetency}" class="error"></span>
+            <span th:errors="*{coreCompetencyId}" class="error"></span>
         </div>
 
         <div class="form-group">
-            <label th:for="positionType">Position Type</label>
-            <select th:field="*{positionType}">
+            <label th:for="positionTypeId">Position Type</label>
+            <select th:field="*{positionTypeId}">
                 <option th:each="positionType : *{positionTypes}"
-                        th:value="${positionType.value}"
+                        th:value="${positionType.id}"
                         th:text="${positionType.value}"></option>
             </select>
-            <span th:errors="*{positionType}" class="error"></span>
+            <span th:errors="*{positionTypeId}" class="error"></span>
         </div>
 
         <input type="submit" value="Add Job" />
